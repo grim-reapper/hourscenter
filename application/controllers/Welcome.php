@@ -20,6 +20,16 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->library('yelp_api');
+		$longopts  = array(
+    "term" => 'bars',
+    "location" => 'San Francisco, CA',
+);
+
+$options = getopt("", $longopts);
+$term = $options['term'] ?: '';
+$location = $options['location'] ?: '';
+		$this->yelp_api->query_api($term,$location);
 		$this->load->view('welcome_message');
 	}
 }

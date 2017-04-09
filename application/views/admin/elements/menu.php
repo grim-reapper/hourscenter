@@ -121,7 +121,7 @@
                 <a href="{!! url('/about') !!}"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
             </li>
             <li>
-                <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tables</a>
+                <a href="<?php echo site_url() ?>admin/brand"><i class="fa fa-fw fa-table"></i> Add Brand</a>
             </li>
             <li>
                 <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>
